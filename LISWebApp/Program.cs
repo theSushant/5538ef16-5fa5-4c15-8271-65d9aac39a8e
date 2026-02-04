@@ -1,7 +1,12 @@
+using LISWebApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ILisService, LisService>();
+
 
 var app = builder.Build();
 

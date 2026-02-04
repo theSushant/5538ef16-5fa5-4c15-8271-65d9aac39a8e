@@ -18,3 +18,14 @@
 .card-eader i {
     cursor: pointer;
 }
+
+.success {
+    color: green;
+    font-weight: bold;
+}
+
+.fail {
+    color: red;
+    font-weight: bold;
+}
+
