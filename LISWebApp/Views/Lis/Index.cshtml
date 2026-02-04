@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "LIS App";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/css/lis.css"/>
+
+<div class="header mt-5">
+    <h4 class="mb-4">Longest Increasing Subsequence</h4>
+
+    <div class="row">
+        <!-- Input Column -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">Input
+                    <span class="float-end" title="Enter integers separated by space, e.g. 6 1 5 9 2"></span>
+                </div>
+                <div class="card-body">
+                    <textarea id="input-numbers" class="form-control code-area" rows="6" placeholder="Enter numbers separated by space"></textarea>
+                    <div class="mt-2">
+                        <button id="submitBtn" class="btn btn-success me-2">Submit</button>
+                        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Output Column -->
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-warning text-dark">Output
+                    <span class="float-end" title="Longest Increasing Subsequence will appear here"></span>
+                </div>
+                <div class="card-body">
+                    <!-- Output as textarea like input -->
+                    <textarea id="output-numbers" class="form-control code-area" rows="6" readonly></textarea>
+                    <div class="mt-4"><b>Status:</b>
+                        <span class="code-status" id="code-status-id" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="@Url.Content("~/lib/jquery/dist/jquery.min.js")"></script>
+    <script src="@Url.Content("~/lib/bootstrap/dist/js/bootstrap.bundle.min.js")"></script>
+    <script src="@Url.Content("~/js/lis.js")"></script>
+}
