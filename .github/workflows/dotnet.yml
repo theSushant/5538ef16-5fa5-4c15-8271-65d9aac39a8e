@@ -1,4 +1,4 @@
-name: .NET CI Pipeline
+name: .NET CI/CD
 
 on:
   push:
@@ -11,18 +11,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+    # 1️ Checkout code
+    - name: Checkout code
+      uses: actions/checkout@v4
 
+    # 2️ Setup .NET 8
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '8.0.x'
 
-    - name: Restore
+    # 3️ Restore dependencies
+    - name: Restore dependencies
       run: dotnet restore
 
+    # 4️ Build solution
     - name: Build
       run: dotnet build --no-restore --configuration Release
 
-    - name: Test
-      run: dotnet test --no-build --configuration Release
+    # 5️ Code linting using StyleCop
+    - name: Install dotnet-format
+      run: dotnet tool install --global dotnet-format
+    - name: Run linting
+      run: dotnet format --check
+
+    # 6️ Run tests with code coverage
+    - name: Test with code coverage
+      run: dotnet test --no-build --configuration Release --collect:"XPlat Code Coverage"
+
+    # 7️ Upload coverage report
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: coverage-report
+        path: '**/TestResults/**/*.cobertura.xml'
+
+    # 8️ Optional: Docker image build
+    - name: Build Docker image
+      run: docker build -t liswebapp .
