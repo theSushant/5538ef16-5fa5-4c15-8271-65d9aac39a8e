@@ -37,10 +37,6 @@ namespace LISWebApp.Controllers
                 var result = _lisService.GetLis(numbers);
                 string resultString = string.Join(" ", result);
 
-                //var filtered = numbers.Where(x => x % 2 == 0).ToList();
-                //var resultString = string.Join(" ", filtered);
-                //var finalResult = resultString.Replace(',', ' ');
-
                 return Json(new { result = resultString });
             }
             catch(Exception e)

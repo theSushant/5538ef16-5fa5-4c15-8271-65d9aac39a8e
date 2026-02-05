@@ -17,9 +17,14 @@
                 </div>
                 <div class="card-body">
                     <textarea id="input-numbers" class="form-control code-area" rows="6" placeholder="Enter numbers separated by space"></textarea>
-                    <div class="mt-2">
-                        <button id="submitBtn" class="btn btn-success me-2">Submit</button>
-                        <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                    <div class="d-flex align-items-center">
+                        <div class="mt-2">
+                            <button id="submitBtn" class="btn btn-success me-2">Submit</button>
+                            <button id="resetBtn" class="btn btn-secondary">Reset</button>
+                        </div>
+                        <div class="ms-2">
+                            <span id="input-message"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -28,11 +33,10 @@
         <!-- Output Column -->
         <div class="col-md-6">
             <div class="card shadow-sm">
-                <div class="card-header bg-warning text-dark">Output
+                <div class="card-header bg-warning text-dark" id="output-header">Output
                     <span class="float-end" title="Longest Increasing Subsequence will appear here"></span>
                 </div>
                 <div class="card-body">
-                    <!-- Output as textarea like input -->
                     <textarea id="output-numbers" class="form-control code-area" rows="6" readonly></textarea>
                     <div class="mt-4"><b>Status:</b>
                         <span class="code-status" id="code-status-id" />
