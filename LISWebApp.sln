@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36705.20 d17.14
+VisualStudioVersion = 17.14.36705.20
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LISWebApp", "LISWebApp\LISWebApp.csproj", "{9346BE2A-2FCD-4D7F-9E96-4916725992FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LISWebApp.Tests", "LISWebApp.Tests\LISWebApp.Tests.csproj", "{4818C175-15F5-413F-9C04-050E9553119F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9346BE2A-2FCD-4D7F-9E96-4916725992FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9346BE2A-2FCD-4D7F-9E96-4916725992FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9346BE2A-2FCD-4D7F-9E96-4916725992FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4818C175-15F5-413F-9C04-050E9553119F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4818C175-15F5-413F-9C04-050E9553119F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4818C175-15F5-413F-9C04-050E9553119F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4818C175-15F5-413F-9C04-050E9553119F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
