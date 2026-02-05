@@ -42,7 +42,7 @@
 
                 return input.GetRange(prevIndx, maxLength);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
