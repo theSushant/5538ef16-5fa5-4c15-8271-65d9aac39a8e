@@ -19,7 +19,7 @@ namespace LISWebApp.Controllers
             }
             catch(Exception ex)
             {
-                return BadRequest($"Fail to load the UI. Error: {ex.Message}");
+                return BadRequest($"Failed to load the UI. Error: {ex.Message}");
             }
         }
 
