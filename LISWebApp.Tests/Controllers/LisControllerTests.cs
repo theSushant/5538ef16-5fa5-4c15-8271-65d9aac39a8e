@@ -23,7 +23,7 @@ namespace LISWebApp.Tests.Controllers
         public void LisControllerConstructor_ThrowsArgumentException_WhenServiceIsNull()
         {
             // Act 
-            var ex = Assert.Throws<ArgumentException>(() => new LisController(null));
+            var ex = Assert.Throws<ArgumentException>(() => new LisController(lisService: null!));
 
             // Assert
             Assert.Contains("lisService", ex.Message);
@@ -74,7 +74,7 @@ namespace LISWebApp.Tests.Controllers
 
             // Assert
             Assert.NotNull(result);
-            var actual = result.Value.GetType().GetProperty("result")?.GetValue(result.Value);
+            var actual = result!.Value!.GetType().GetProperty("result")!.GetValue(result!.Value);
             Assert.Equal(expected, actual);
         }
 
