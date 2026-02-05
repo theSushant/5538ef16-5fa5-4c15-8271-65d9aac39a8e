@@ -22,7 +22,7 @@ If multiple LIS exist with the same length, the earliest one is returned.
 - Input: A string containing integers separated by whitespace  
   Example: 6 1 5 9 2
 - Output: Longest Increasing Subsequence  
-  Result: 1 5 9
+  Result: 1 5 9 
   
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -34,9 +34,9 @@ If multiple LIS exist with the same length, the earliest one is returned.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
-## Setup Guide
-1. Clone the repository: git clone https://github.com/<your-username>/<repo-name>.git
-2. Navigate to you project: cd <repo-name>
+## Setup Guide 
+1. Clone the repository: git https://github.com/theSushant/5538ef16-5fa5-4c15-8271-65d9aac39a8e.git
+2. Navigate to you project: cd 5538ef16-5fa5-4c15-8271-65d9aac39a8e
 3. Build the application: dotnet build
 4. Run the application: dotnet run
  ---- The application will be available at https://localhost:5001 or http://localhost:5000. ---
